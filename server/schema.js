@@ -9,13 +9,6 @@ type Book {
 	author: String
 }
 
-type Query {
-	books: [Book]
-	mainCards: [MainCard]
-	animals:[Animal]
-	animal(slug:String!):Animal
-}
-
 type Animal {
 	id:ID!
 	slug:String!
@@ -41,6 +34,17 @@ type Category{
 	image:String!
 	animals:[Animal!]
 }
+
+
+
+type Query {
+	books: [Book]
+	mainCards: [MainCard]
+	animals:[Animal]
+	animal(slug:String!):Animal
+}
+
+
 
 `;
 

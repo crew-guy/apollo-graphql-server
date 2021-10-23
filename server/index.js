@@ -5,7 +5,6 @@ const {typeDefs} = require('./schema.js')
 
 const resolvers = {
     Query: {
-        categories: () => categories,
         mainCards: () => mainCards,
         animals: () => animals,
         animal: (parent, args, ctx, info) => {
@@ -13,7 +12,9 @@ const resolvers = {
                 return animal.slug == args.slug
             })
             return animal
-        }
+        },
+        categories: () => categories,
+        category
     }
 }
 
