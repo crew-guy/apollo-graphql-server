@@ -28,6 +28,11 @@ const resolvers = {
             })
             return animalsOfCategory
         }
+    },
+    Animal: {
+        category: (parent, args, ctx, info) => {
+            return categories.find((category) => category.id == parent.category);
+      } 
     }
 }
 

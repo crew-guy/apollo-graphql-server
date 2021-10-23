@@ -31,6 +31,7 @@ type Category{
 	id:ID!
 	category:String!
 	image:String!
+	slug:String!
 	animals:[Animal!]
 }
 
