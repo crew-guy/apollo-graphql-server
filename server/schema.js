@@ -30,18 +30,17 @@ type MainCard {
 type Category{
 	id:ID!
 	category:String!
-	slug:String!
 	image:String!
 	animals:[Animal!]
 }
-
-
 
 type Query {
 	books: [Book]
 	mainCards: [MainCard]
 	animals:[Animal]
 	animal(slug:String!):Animal
+	categories:[Category!]
+	category(slug:String!):Category
 }
 
 

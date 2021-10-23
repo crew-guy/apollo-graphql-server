@@ -14,7 +14,19 @@ const resolvers = {
             return animal
         },
         categories: () => categories,
-        category
+        category: (parent, args, ctx, info) => {
+            const category = categories.find(category => {
+                return category.category == args.slug
+            })
+        }
+    },
+    Category: {
+        category: (parent, args, ctx, info)=>{
+            const animalsOfCategory = animals.filter((animal) => {
+                animal.category = parent.id
+            })
+            return animalsOfCategory
+        }
     }
 }
 
