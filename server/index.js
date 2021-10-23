@@ -18,12 +18,13 @@ const resolvers = {
             const category = categories.find(category => {
                 return category.category == args.slug
             })
+            return category
         }
     },
     Category: {
-        category: (parent, args, ctx, info)=>{
+        animals: (parent, args, ctx, info)=>{
             const animalsOfCategory = animals.filter((animal) => {
-                animal.category = parent.id
+                return animal.category == parent.id
             })
             return animalsOfCategory
         }
