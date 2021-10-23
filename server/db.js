@@ -1,30 +1,17 @@
-
 const mainCards = [
     {
-        title: "Recently viewed",
-        image:"lion"
+      title: "Recently Viewed",
+      image: "lion",
     },
     {
-        title: "Featured",
-        image:"penguin"
+      title: 'Looking for a Gift?',
+      image: 'penguin',
     },
     {
-        title: "Popular",
-        image:"butterfly"
+      title: 'Best Behaved',
+      image: 'cat',
     },
-]
-
-
-const books = [
-    {
-        title:"Book 1",
-        author:"Author 1",
-    },
-    {
-        title:"Book 2",
-        author:"Author 2",  
-    },
-]
+];
 
 const animals = [
     {
@@ -185,8 +172,8 @@ const animals = [
       }
   ]
 
-module.exports=  {
+module.exports = {
     mainCards,
-    books,
-    animals
+    animals,
+    categories
 }

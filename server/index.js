@@ -1,12 +1,19 @@
-const { ApolloServer, gql } = require('apollo-server')
-const { mainCards, books } = require('./db')
+const { ApolloServer} = require('apollo-server')
+const { mainCards, categories, animals } = require('./db')
 const {typeDefs} = require('./schema.js')
 
 
 const resolvers = {
     Query: {
-        books: () => books,
-        mainCards:()=> mainCards
+        categories: () => categories,
+        mainCards: () => mainCards,
+        animals: () => animals,
+        animal: (parent, args, ctx, info) => {
+            const animal = animals.find((animal) => {
+                return animal.slug == args.slug
+            })
+            return animal
+        }
     }
 }
 
