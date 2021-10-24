@@ -8,7 +8,8 @@ const Query = {
         return animal
     },
     categories: (parent, args,{categories} ) => categories,
-    category: (parent, args, {categories}, info) => {
+    category: (parent, args, { categories }, info) => {
+        console.log(args)
         const category = categories.find(category => {
             return category.category == args.slug
         })
