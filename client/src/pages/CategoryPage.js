@@ -3,10 +3,14 @@ import { useParams } from "react-router-dom"
 import { Container } from 'react-bootstrap'
 import CardDisplay from '../components/CardDisplay/CardDisplay'
 
+
+
+
 function CategoryPage() {
     
     const { slug } = useParams()
 
+    
     return (
         <div className="py-5">
             <Container>
