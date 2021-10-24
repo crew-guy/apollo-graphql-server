@@ -56,7 +56,7 @@ input UpdateAnimalInput{
 	slug:String
 	image: String
 	title: String
-	category:Category
+	category:String
 	rating: Float
 	price: String
 	description: [String!]
@@ -69,7 +69,7 @@ input AddAnimalInput {
 	slug:String!
 	image: String!
 	title: String!
-	category:Category!
+	category:String!
 	rating: Float!
 	price: String!
 	description: [String!]!
