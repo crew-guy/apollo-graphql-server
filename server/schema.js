@@ -45,6 +45,37 @@ type Query {
 }
 
 
+type Mutation {
+	addAnimal(input:AddAnimalInput!):Animal!
+	updateAnimal(input:UpdateAnimalInput):Animal!
+	removeAnimal(id:ID!):Animal!
+}
+
+input UpdateAnimalInput{
+	id:ID!
+	slug:String
+	image: String
+	title: String
+	category:Category
+	rating: Float
+	price: String
+	description: [String!]
+	stock: Int
+	onSale: Boolean
+}
+
+
+input AddAnimalInput {
+	slug:String!
+	image: String!
+	title: String!
+	category:Category!
+	rating: Float!
+	price: String!
+	description: [String!]!
+	stock: Int!
+	onSale: Boolean!
+}
 
 `;
 

@@ -5,15 +5,14 @@ const Query = require('./resolvers/Query')
 const Category = require('./resolvers/Category')
 const Animal = require('./resolvers/Animal')
 
-const resolvers = {
-    Query,
-    Category,
-    Animal
-}
 
 const server = new ApolloServer({
     typeDefs,
-    resolvers,
+    resolvers:{
+        Query,
+        Category,
+        Animal
+    },
     context: {
         mainCards,
         categories,
